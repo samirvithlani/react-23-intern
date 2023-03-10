@@ -3,7 +3,17 @@ import "./App.css";
 import { Header } from "./Header";
 import Footer from "./Footer";
 import { Employee } from "./components/employee/Employee";
-import { Student } from "./components/student/Student";
+// import { Student } from "./components/student/Student";
+
+import { Navbar } from "./pages/Navbar";
+import { Route, Routes } from "react-router-dom";
+import { AboutUs } from "./pages/AboutUs";
+import { ContactUs } from "./pages/ContactUs";
+import { FeedBack } from "./pages/FeedBack";
+import { Manager } from "./pages/Manager";
+import { Director } from "./pages/Director";
+import { Management } from "./pages/Management";
+import { Student } from "./components/forms/Student";
 
 function App() {
 
@@ -19,7 +29,21 @@ function App() {
 
   return (
     <div className="App">
-      <Employee n ={name} user ={user}/>
+      {/* <Navbar/> */}
+      <Routes>
+        <Route path="/" element={<Navbar/>}/>
+        <Route path="/aboutus" element={<AboutUs/>}/>
+        <Route path="/contactus" element={<ContactUs/>}/>
+        <Route path ="/feedback/:id" element={<FeedBack/>}/>
+        <Route path="/contactus/manager" element={<Manager/>}/>
+        <Route path="/contactus/director" element={<Director/>}/>
+        <Route path ="/management" element = {<Management/>}/>
+        <Route path ="/*" element={<h1>404 Not Found</h1>}/>
+        <Route path = "/addstudent" element = {<Student/>} />
+
+
+      </Routes>
+      {/* <Employee n ={name} user ={user}/> */}
       {/* <Student title = {title}/> */}
       {/* <Header /> */}
       {/* <h1>{name}</h1>
