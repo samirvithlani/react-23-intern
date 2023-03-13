@@ -31,6 +31,9 @@ export const Navbar = () => {
         <li>
           <Link to="/contactus">CONTACT US</Link>
         </li>
+        <li>
+          <Link to ="/userNavbar">USER NAVBAR</Link>
+        </li>
 
         <li>
           {data.map((d) => {

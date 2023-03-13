@@ -14,6 +14,9 @@ import { Manager } from "./pages/Manager";
 import { Director } from "./pages/Director";
 import { Management } from "./pages/Management";
 import { Student } from "./components/forms/Student";
+import { UserApi } from "./api/UserApi";
+import { UserNavbar } from "./api/UserNavbar";
+import { UserReg } from "./api/UserReg";
 
 function App() {
 
@@ -30,6 +33,7 @@ function App() {
   return (
     <div className="App">
       {/* <Navbar/> */}
+  
       <Routes>
         <Route path="/" element={<Navbar/>}/>
         <Route path="/aboutus" element={<AboutUs/>}/>
@@ -40,6 +44,9 @@ function App() {
         <Route path ="/management" element = {<Management/>}/>
         <Route path ="/*" element={<h1>404 Not Found</h1>}/>
         <Route path = "/addstudent" element = {<Student/>} />
+        <Route path="/userNavbar" element={<UserNavbar/>}/>
+        <Route path ="/userApi" element = {<UserApi/>}/>
+        <Route path="/userreg" element= {<UserReg/>}/>
 
 
       </Routes>
