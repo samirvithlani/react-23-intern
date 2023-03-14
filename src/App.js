@@ -17,6 +17,8 @@ import { Student } from "./components/forms/Student";
 import { UserApi } from "./api/UserApi";
 import { UserNavbar } from "./api/UserNavbar";
 import { UserReg } from "./api/UserReg";
+import { UserRegi } from "./components/users/UserRegi";
+import { UserLogin } from "./components/users/UserLogin";
 
 function App() {
 
@@ -33,7 +35,8 @@ function App() {
   return (
     <div className="App">
       {/* <Navbar/> */}
-  
+    {/* <UserRegi/> */}
+    <UserLogin/>
       <Routes>
         <Route path="/" element={<Navbar/>}/>
         <Route path="/aboutus" element={<AboutUs/>}/>
