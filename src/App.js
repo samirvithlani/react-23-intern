@@ -19,6 +19,8 @@ import { UserNavbar } from "./api/UserNavbar";
 import { UserReg } from "./api/UserReg";
 import { UserRegi } from "./components/users/UserRegi";
 import { UserLogin } from "./components/users/UserLogin";
+import { UserDashBoard } from "./components/UserDashBoard";
+import { DevDashBoard } from "./components/DevDashBoard";
 
 function App() {
 
@@ -36,16 +38,19 @@ function App() {
     <div className="App">
       {/* <Navbar/> */}
     {/* <UserRegi/> */}
-    <UserLogin/>
+    
       <Routes>
-        <Route path="/" element={<Navbar/>}/>
+        {/* <Route path="/" element={<Navbar/>}/> */}
+        <Route path ="/login" element={<UserLogin/>}></Route>
+        <Route path ="/userdashboard" element={<UserDashBoard/>}></Route>
+        <Route path ="/devdashboard" element={<DevDashBoard/>}></Route>
         <Route path="/aboutus" element={<AboutUs/>}/>
         <Route path="/contactus" element={<ContactUs/>}/>
         <Route path ="/feedback/:id" element={<FeedBack/>}/>
         <Route path="/contactus/manager" element={<Manager/>}/>
         <Route path="/contactus/director" element={<Director/>}/>
         <Route path ="/management" element = {<Management/>}/>
-        <Route path ="/*" element={<h1>404 Not Found</h1>}/>
+        {/* <Route path ="/*" element={<h1>404 Not Found</h1>}/> */}
         <Route path = "/addstudent" element = {<Student/>} />
         <Route path="/userNavbar" element={<UserNavbar/>}/>
         <Route path ="/userApi" element = {<UserApi/>}/>
