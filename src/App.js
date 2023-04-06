@@ -21,6 +21,7 @@ import { UserRegi } from "./components/users/UserRegi";
 import { UserLogin } from "./components/users/UserLogin";
 import { UserDashBoard } from "./components/UserDashBoard";
 import { DevDashBoard } from "./components/DevDashBoard";
+import { FileUpload } from "./components/forms/FileUpload";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
       {/* <Navbar/> */}
     {/* <UserRegi/> */}
     
+    <FileUpload/>
       <Routes>
         {/* <Route path="/" element={<Navbar/>}/> */}
         <Route path ="/login" element={<UserLogin/>}></Route>
