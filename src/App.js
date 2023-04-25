@@ -22,10 +22,13 @@ import { UserLogin } from "./components/users/UserLogin";
 import { UserDashBoard } from "./components/UserDashBoard";
 import { DevDashBoard } from "./components/DevDashBoard";
 import { FileUpload } from "./components/forms/FileUpload";
+import ProtectedRoutes from "./ProtectedRoutes";
+import { GetFiles } from "./GetFiles";
+import { Products } from "./components/Products";
+import { ChartDemo } from "./components/ChartDemo";
 
 function App() {
-
-  var title = "ROYAL"
+  var title = "ROYAL";
   var name = "Rajavi";
   var age = 30;
   var isActive = true;
@@ -38,27 +41,33 @@ function App() {
   return (
     <div className="App">
       {/* <Navbar/> */}
-    {/* <UserRegi/> */}
-    
-    <FileUpload/>
+      {/* <UserRegi/> */}
+
+      {/* <FileUpload/> */}
+      {/* <GetFiles/> */}
+      {/* <Products/> */}
+      <ChartDemo/>
       <Routes>
-        {/* <Route path="/" element={<Navbar/>}/> */}
-        <Route path ="/login" element={<UserLogin/>}></Route>
-        <Route path ="/userdashboard" element={<UserDashBoard/>}></Route>
-        <Route path ="/devdashboard" element={<DevDashBoard/>}></Route>
-        <Route path="/aboutus" element={<AboutUs/>}/>
-        <Route path="/contactus" element={<ContactUs/>}/>
-        <Route path ="/feedback/:id" element={<FeedBack/>}/>
-        <Route path="/contactus/manager" element={<Manager/>}/>
-        <Route path="/contactus/director" element={<Director/>}/>
-        <Route path ="/management" element = {<Management/>}/>
+        <Route path="/" element={<Navbar />} />
+        <Route path="/login" element={<UserLogin />}></Route>
+        <Route path="/userdashboard" element={<UserDashBoard />}></Route>
+        <Route path="/devdashboard" element={<DevDashBoard />}></Route>
+
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/addstudent" element={<Student />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
+        </Route>
+
+        <Route path="/feedback/:id" element={<FeedBack />} />
+        <Route path="/contactus/manager" element={<Manager />} />
+        <Route path="/contactus/director" element={<Director />} />
+        <Route path="/management" element={<Management />} />
         {/* <Route path ="/*" element={<h1>404 Not Found</h1>}/> */}
-        <Route path = "/addstudent" element = {<Student/>} />
-        <Route path="/userNavbar" element={<UserNavbar/>}/>
-        <Route path ="/userApi" element = {<UserApi/>}/>
-        <Route path="/userreg" element= {<UserReg/>}/>
 
-
+        <Route path="/userNavbar" element={<UserNavbar />} />
+        <Route path="/userApi" element={<UserApi />} />
+        <Route path="/userreg" element={<UserReg />} />
       </Routes>
       {/* <Employee n ={name} user ={user}/> */}
       {/* <Student title = {title}/> */}
