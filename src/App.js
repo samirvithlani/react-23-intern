@@ -26,6 +26,9 @@ import ProtectedRoutes from "./ProtectedRoutes";
 import { GetFiles } from "./GetFiles";
 import { Products } from "./components/Products";
 import { ChartDemo } from "./components/ChartDemo";
+import { CharDemo2 } from "./components/CharDemo2";
+import { ProductList } from "./components/Products/ProductList";
+import { UpdateUser } from "./components/forms/UpdateUser";
 
 function App() {
   var title = "ROYAL";
@@ -46,9 +49,11 @@ function App() {
       {/* <FileUpload/> */}
       {/* <GetFiles/> */}
       {/* <Products/> */}
-      <ChartDemo/>
+      {/* <ChartDemo/> */}
+      {/* <ProductList/> */}
+      <UpdateUser/>
       <Routes>
-        <Route path="/" element={<Navbar />} />
+        {/* <Route path="/" element={<Navbar />} /> */}
         <Route path="/login" element={<UserLogin />}></Route>
         <Route path="/userdashboard" element={<UserDashBoard />}></Route>
         <Route path="/devdashboard" element={<DevDashBoard />}></Route>

@@ -21,8 +21,12 @@ export const ChartDemo = () => {
   };
 
   const [chartData, setchartData] = useState("");
+  var style = {
+    width: "300px",
+    height: "300px",
+  }
   return (
-    <div>
+    <div style={style}>
       <PieChart data={data} />
     </div>
   );
